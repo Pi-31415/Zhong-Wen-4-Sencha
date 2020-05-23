@@ -1,0 +1,232 @@
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 14px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+tr:hover{background-color: #6bdeb4}
+
+th {
+  background-color: #3eb489;
+  color: white;
+}
+
+@font-face {
+    font-family: 'stfangsongregular';
+    src: url('../fonts/stfangsong/stfangso-webfont.woff2') format('woff2'),
+         url('../fonts/stfangsong/stfangso-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Roboto Thin'), local('Roboto-Thin'),
+       url('../fonts/roboto-v19-latin-100.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/roboto-v19-latin-100.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'),
+       url('../fonts/roboto-v19-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/roboto-v19-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+body{
+  font-family: Roboto;
+}
+
+.chinese{
+  font-family: '宋体';
+  font-weight: normal;
+  font-style: normal;
+}
+
+.chinesebig, .englishbig{
+  font-family: '宋体';
+  font-size: 3em;
+}
+
+.chinword{
+  font-family: '宋体';
+  font-size: 1.7em;
+  color: black;
+}
+
+.speakericon{
+  font-size: 1.5em;
+   cursor:pointer;
+   padding: 10px;
+   margin: 10px;
+   color:#666;
+}
+
+.speakericon :hover{
+  color:#3eb489;
+}
+
+a{
+  text-decoration: none;
+  color: #3eb489;
+}
+
+/*This is the responsive resizing of the card components*/
+.fabescape{
+  height:0px;
+}
+.card{
+  width:50%;
+  margin-left:auto;
+  margin-right: auto;
+}
+#dis{
+  width:50%;
+  margin-left:auto;
+  margin-right: auto;
+}
+
+@media only screen and (max-width: 800px) {
+  .card{
+    width:90%;
+  }
+  #dis{
+    width:90%;
+  }
+  .homebtn{
+    width:100%;
+  }
+  .fabescape{
+    height:90px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .card{
+    width:95%;
+  }
+  #dis{
+    width:95%;
+  }
+
+}
+
+/*Modifying the App theme*/
+.toolbar,.button--material{
+  background-color: #3eb489;
+  color: #fff;
+}
+.notification--material{
+  background-color: #4fb3bf;
+  font-size: 14px;
+}
+.toolbar-button--material{
+  color: #fff;
+}
+
+.toolbar__title{
+  color: #fff;
+}
+
+.homebtn{
+  width:70%;
+}
+
+.homebtn:hover{
+  width:70%;
+  background-color: #6bdeb4;
+}
+
+.hanzi-container {
+    float: left;
+}
+
+.hanzi-container-large {
+    clear: left;
+}
+
+
+.form-submit-button {
+
+  font: inherit;
+    background: #3eb489;
+    user-select: none;
+    border-radius: 3px;
+    font-family: Roboto,Noto,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    line-height: 36px;
+    font-size: 14px;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    color: #fff;
+    font-weight: 500;
+    opacity: 1;
+
+
+}
+
+.form-submit-button:hover {
+
+  background-color: #6bdeb4;
+  color: #fff;
+
+}
+
+.selection{
+  color: #000;
+}
+
+.pinyin{
+  color: red;
+}
+
+.chip {
+  margin-left: auto;
+  margin-right: auto;
+    display: inline-block;
+    height: 32px;
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba(0,0,0,0.6);
+    line-height: 32px;
+    padding: 0 12px;
+    border-radius: 16px;
+    background-color: #e4e4e4;
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
+
+.chip > img {
+    float: left;
+    margin: 0 8px 0 -12px;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+}
+
+img {
+    border-style: none;
+}
+
+.shadowcard{
+
+  /*background: #ffffff url("https://cdn.thegentlemansjournal.com/wp-content/uploads/2017/10/greatwall-900x600-c-center.jpg") no-repeat left top;
+*/  background-attachment: fixed;
+   background-size: 100%;
+
+}
+
+.shadowtext{
+  font-size: 1.5em;
+  font-family: sans-serif;
+}

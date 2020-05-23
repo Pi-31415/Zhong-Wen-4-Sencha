@@ -1,0 +1,11 @@
+[05-Sep-2019 07:05:41 UTC] PHP Warning:  mysqli_connect(): (HY000/2002): Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2) in /home/v5q3pi79yjtt/public_html/zw.paingthet.com/admin/dbconfig.php on line 5
+[05-Sep-2019 07:05:41 UTC] PHP Warning:  mysqli_select_db() expects parameter 1 to be mysqli, boolean given in /home/v5q3pi79yjtt/public_html/zw.paingthet.com/admin/dbconfig.php on line 12
+[05-Sep-2019 07:05:41 UTC] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/v5q3pi79yjtt/public_html/zw.paingthet.com/admin/dbconfig.php on line 13
+[05-Sep-2019 07:05:41 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on boolean in /home/v5q3pi79yjtt/public_html/zw.paingthet.com/admin/char.php:107
+Stack trace:
+#0 {main}
+  thrown in /home/v5q3pi79yjtt/public_html/zw.paingthet.com/admin/char.php on line 107
+[05-Sep-2019 07:05:42 UTC] PHP Warning:  mysqli_connect(): (HY000/2002): Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2) in /home/v5q3pi79yjtt/public_html/zw.paingthet.com/admin/dbconfig.php on line 5
+[05-Sep-2019 07:05:42 UTC] PHP Warning:  mysqli_select_db() expects parameter 1 to be mysqli, boolean given in /home/v5q3pi79yjtt/public_html/zw.paingthet.com/admin/dbconfig.php on line 12
+[05-Sep-2019 07:05:42 UTC] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/v5q3pi79yjtt/public_html/zw.paingthet.com/admin/dbconfig.php on line 13
+[08-Oct-2019 23:02:36 UTC] PHP Notice:  Trying to get property 'num_rows' of non-object in /home/v5q3pi79yjtt/public_html/zw.paingthet.com/admin/sen.php on line 99

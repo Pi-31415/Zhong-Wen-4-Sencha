@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Zhong Wen 3.0 </title>
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--faviconvicon Management-->
+        <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon/faviconvicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="favicon/faviconvicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon/faviconvicon-16x16.png">
+        <link rel="manifest" href="favicon/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/onsenui.min.css">
+        <link rel="stylesheet" href="css/onsen-css-components.min.css">
+        <link rel="stylesheet" href="css/onsenui-core.min.css">
+        <link rel="stylesheet" href="css/onsenui-fonts.css">
+        <link rel="stylesheet" href="css/theme.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="lib/jquery.min.js"></script>
+        <script src="lib/onsenui.min.js"></script>
+
+
+        <!--Additional Libraries are loaded here. P5 is for the write only.-->
+
+        <script src="http://code.responsivevoice.org/responsivevoice.js"></script>
+        <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/hanzi-writer@1.3/dist/hanzi-writer.min.js"></script>
+        <!--Main App Scripts come here-->
+
+        <script src="js/main.js" charset="utf-8"></script>
+        <script src="js/chinese.js" charset="utf-8"></script>
+        <script src="js/tutorial.js" charset="utf-8"></script>
+
+
+
+        <style>
+            a {
+                color: #fff;
+            }
+
+        </style>
+    </head>
+
+<body onload="switchpage('home');">
+    
+    <ons-page onload="nextchar();">
+        <ons-toolbar>
+            <div class="left">
+                <ons-toolbar-button>
+                    <a href="index.php" style="color:white;">
+                        <ons-icon icon="md-arrow-back"></ons-icon>
+                    </a>
+                </ons-toolbar-button>
+            </div>
+            <div class="center">
+                Sentence Guessing</div>
+
+
+
+        </ons-toolbar>
+        
+
+        <!-- Warning: Do not edit the splitter code apart from list items -->
+        <ons-splitter>
+            <!-- Everything not in the side menu -->
+            <ons-splitter-content>
+                <ons-navigator id="navigator">
+                </ons-navigator>
+            </ons-splitter-content>
+        </ons-splitter>
+    </ons-page>
+   
+  <template id="home.html">
+    <ons-page id="home">
+      <ons-card>
+        <div class="title">
+          Sentence Guessing
+        </div>
+        <div class="content">
+          <p>Guess the meaning of the following sentence.</p>
+            
+            <h2 id="question">吃晚饭时，男人们象海盗似的狼吞虎咽。</h2>
+            
+            <p  id="answer" style="color: red" style="visibility:hidden">At supper the men eat like vikings.</p>
+            
+            <br>
+            <p>You know the meaning of these words:</p>
+            <h3 id="hint">(的,虎,人,吃晚饭,吃)</h3>
+            
+            <br><br>
+            <center><ons-button id ="showansbtn" class="btn-show" onclick="showengmeaning()">
+                Show Answer
+            </ons-button></center>
+            
+            <center><ons-button id ="nextbtn" class="btn-show" onclick="nextchar()" style="visibility: hidden">
+                Next
+            </ons-button></center>
+            
+            <br>
+        </div>
+
+
+      </ons-card>
+      <br>
+    </ons-page>
+  </template>
+
+
+    <script>
+        
+        var sen = ["我猜想他是个秘密活动的法西斯党员。","他学汉语刚刚入门。","邮递员把信从门底下塞入。","他只见到一个衣着不整的年轻人。","如果她和我的身份一样就好了。","近年来她写的书质量下降了。","菜里多放点酱油。","吉米红运高照。","“我们碰上大风了，”德怀尔说。","几个菜市场的格局差不多。","我小妹有一顶红色游泳帽。","圣诞节前生意总是很兴隆。","对于读过科幻杂志中星际旅行故事的读者来说，小行星已是平淡无味了。","对许多伞菌来说情况可能就是这样。","观众们认为这部电视剧很有趣，但是过于做作。","我妹妹是同我一同散步的伙伴。","杰克的裤子膝盖处破了洞了。","飞行员失去了对飞机的控制。","他觉得自己的数学比约翰强。","你收拾盘碟，我去煮咖啡。","把马铃薯炖十分钟。","他在近距离平射射程内向狮子射击。","是的，我想要一些热狗、爆玉米花和桔子汁。","注意饭食无须看医生。","他是科学家又是诗人。","她一面听一面脸色忽红忽白。","我们要跟老修道院长开个玩笑。","我们为当今一代的厨师设计厨房。","他不只是有点儿胖，而且肌肉松弛。","上星期另一家超级市场开张了。","粘阻力等于合力。","这个胶卷剩下三张没拍。","爸爸，我在病榻给你写信。","她匆匆忙忙把儿子打发到学校去了。","尼克尽最大努力去赢得赛跑的胜利。","冒险小说激发起他的想像力。","我原来猜想会在图书馆里找到你。","我一时想不起他的名字了。","让你外婆坐下来。","他狂妄自大把别人都吓跑了。","拉什顿因这件事很不开心。","别不高兴，我只不过想引你吃醋。","我们要跟老修道院长开个玩笑。","它看重财富而轻视科学。","两国签订了文化协定。","飓风总是乘人不备突然袭击的。","家具太笨，搬起来很不方便。","他热切的蓝眼睛仍然使她激动。","法国的农民使用精耕细作的方法。","从前我不知道夫人会头晕。","他提醒自己要有耐心。","他马上就要接着写日记了。","主席把会议延期一周。","本店货物售出概不退换。","明天我要到伦敦去办事。","鱼类、蟹类、章鱼都是自游动物的组成部分。","她当了许多年事务律师。","尝尝这些蛋糕吧，都是家里做的。","那个画家在油画布上轻轻地涂着颜色。","请稍等一会儿。","暑假中我的体重增加了十镑。","他嘴张着，眼珠都鼓了出来。","他们是指定的校服供应商。","比尔来电话时我正在吃午饭。","抱歉，这套牙齿是为了跳拉丁舞配的","看见他总是有规律地每天毫无变化地在同一时间进洗手间，也使她火气冲天。","商品的价值是经常变动的。","贸易合同规定余额以人民币结算。","留宿一夜兼包次日早餐费用为15。","我今天来月经了。","这样，局势未明的几个月过去了。","地球每天完成一次自转。","母亲工作时经济收入增加了。","不论他住在哪儿，他总要生一堆火。","他正讲俄罗斯文学。","我向你保证，他以为我肩膀上顶着的是一颗南瓜。","他还活着心脏还在跳。","往后的天气越来越冷了。","那个铁匠在那儿看广告。","她把鸡骨头全用来熬汤了。","在穆斯林国家星期五是假日。","拔罐法是指使罐紧吸于穴位上进行治疗的方法。","打篮球是家喻户晓的运动。","那会增加你的辩论的力量的。","配线坏了，需要更换。","酸浸渍中用的酸有硫酸。","包装和邮费在外，价格五元。","他曾经是重量级职业拳击手。","打开窗户放进些新鲜空气。","她摔得膝关节脱臼了。","其它形式的食物全都绝迹了。","我们到泰国卡斯尔一家上等馆子去。","那艘船正以三十五节的速度航行。","这首诗有民歌风味。","我父母告诫我千万不要说谎。","总之，那是个很繁华的地方。","台风吹倒了数百棵树。","司机让他搭脚儿去火车站。","好的秘书总是很多人都需要的。","将鸡蛋饼和.、黄瓜和火腿一齐切成长条（黄瓜要保留皮并且用少许盐调味） 。","这条铁路是去年通车的。","他把满头卷发的脑袋探出窗外。","她在给丈夫织一双袜子。","出门前把皮鞋擦亮。","他到村里的买卖人那儿付帐去了。","对于官僚主义，群众是不买帐的。","她向那位漂亮的男演员暗送秋波。","生菜生长在“绿金山谷”中。","遇到稀碱就容易环化。","过多的氧也可阻碍再生。","肿瘤内含胶冻样物质。","他脸上堆着一副亲切的笑容。","银行家被他的直率逗笑了。","到四月五日，赤道无风带状态逐渐缓和。","这种结构，语法不通。","约翰一边咬着多汁的汉堡包，一边问。","他的理发店生意十分兴隆。","“我情愿喝一杯淡茶！”戴西叫道。","黄鼠狼给鸡拜年，没安好心。","一个小朋友趴在它宽阔的灰色的脊梁上睡得正熟。","他说完这话，就跑到楼上来。","他是电车公司的调度。","他没回答是怕伤她的感情。","本地商店有些廉价的收音机。","或许一些阿斯匹林或止痛药可能会有帮助。","有人竟然轻率地主张炸开它。","我们沿着小道走到正门。","我们坐二等舱由丹佛飞到纽约。","公司的董事长很听她的话。","威尔士的一些地区星期日禁酒。","今天食堂比往常忙得多。","我穿着新冰鞋溜冰玩得痛快极了。","许多现代发明便利了家务劳动。","苔丝从床上坐了起来，听了这个话，一半朦胧，一半清醒，在那儿直发楞。","和风送爽，小雨缤纷。","雇员有打折购买的特权。","他的父亲是经营香蕉发财的。","冒险小说激发起他的想像力。","你会要一块年糕呢还是一个巨无霸？","她飞快地骑着新自行车。","民族舞也好，随便什么舞她都喜欢看。","我喜欢一边喝啤酒一边吃海鲜。","他的房子在那边，离这儿有一段距离。","后来我才明白他是摄影师。","你可免税带进1公升酒。","我可以把你的脖子掐断，同折断一根胡萝卜一样。","熟透的李子和苹果自然会坠落。","你安排妥当以后，马上就来。","那牛排硬得他没法吃。","他是理科主考人之一。","近期内将下大雪。","我有点儿钱，也有些爱好。","我们度假一开始就大吉大利，天气很好，火车也都准点。","他请医生诊断他的健康。","他不想插身在这场纠纷中间。","我想知道有没有学好外语的捷径？","我这份工作进展不太快。","她的弟弟找到了一个旗鼓相当的对手。","停车场里只剩一个位置了。","她决心把这项工作干到底。","他会让我去读完法律课程的。","车票上写明经北京到上海。","这种旋暴风在北半球是作逆时针方向旋转。","惩罚条款印在不起眼的小号字体部分。","不管拿出一个什么样的课程表来，总不会得到每一个人的认可。","她轻手轻脚，一声不吭地站在更衣室里。","他们从国家手里骗了一百万元。","这种水分很多的清脆白萝卜，跟她现在的胃口完全相配。","亚洲是人类的发源地之一。","芭蕾舞演员每天练功。","我知道他最喜欢哪一类人。","他觉得晕车。","我们每个周末都到湖上划船。","货币创造过程就会停滞。","有人竟然轻率地主张炸开它。","那对年轻的父母惯坏了他们的独生子。","竞赛将在体育馆举行。","我喜欢古典音乐，不太喜欢流行音乐。","正因为她穷，我更爱她。","他坐在楼下慢慢地把水酒独酌。","按习俗，妇女要分开坐。","那这回就真是喜庆团圆了。","阿司匹林是必备的头痛良药。","静默是表示快乐的最好方法。","我觉得这干酪味道太重了点。","她已经把饺子馅和好了。","她脚疼，但还不至于不能行走。","我一开始就偏向爷爷。","老师今天指定十个问题。","黄瓜没有很多营养。","她态度友好，春风满面。","她是一个节俭的家庭主妇。","她喜欢他的肩膀很结实。","我家离学院只有一站地。","高尔夫球是一项迷人的运动。","我可以为您去弄点意大利面或什么的","英国在都铎王朝时代处于全盛期。","我中学毕业前就会开车了。","他的政治生涯长达半个世纪。","留点肚子吃甜馅饼吧，彼得。","特德为他的朋友们举行了一次聚会。","你的钢琴的音低了，该调一调了。","奶奶好不容易地摇摇晃晃地上了楼。","橙花和婚礼联系在一起。","足球场上你争我夺。","它们是当时最高级的生物。","到晚上我的情绪又消沉下来了。","我们俩是一根藤上的苦瓜。","下下个星期他将返回伦敦。","人们偶尔会妙语横生。","我们试试另一个。","正因为她穷，我更爱她。","今年我们的悬钩子歉收。","他们把蒸气压力保持在所需的水平上。","他今天没来，许是生病了。","你在监狱里似乎受了很多苦。","慢一点儿，前面有个急转弯。","她自以为是了不起的歌手。","我听到收音机里演奏着音乐。","鲜血淋漓的嫩肉就暴露在外。","她和帕特丽夏共用一个办公室。","他们给他房子的估价为15000元。","我要参加感恩节的演出。","无计可施，只好让步了。","好生替我保管，千万别出差错。","生菜生长在“绿金山谷”中。","他穿着旧牛仔裤和一双运动鞋。","我喜欢茉莉花茶的香味。","我要和经理本人谈一谈。","苹果和梨比较起来，我更爱吃苹果。","他把一个醉汉从酒店中推了出去。","他185公分高。","天气逐渐转晴并稳定下来。","中午的时候，他开始弹铉琴了。","他留在大学里做研究工作。","我们会在更适合的时候来拜访的。","六月五号的气象预报是阴天。","他觉得自己的数学比约翰强。","那时我的头发梳两条辫子。","勺子用来舀面粉、糖和冰淇淋。","他的勇敢行为应该得到我们的赞美。","他的牙齿又火辣辣地疼了一下。","正是夏季花儿盛开的季节。","只要想想他们在舞场里的那种举止，就知道他们并不打算要讨一般人的好。","只有少数记者被允许入内。","我给你弄些鸡蛋和腌猪肉。","农民拿出陕西吉他。","猪在树丛间到处乱拱。","各种蔬菜都是有益于健康的食物。","他们都饿了，饭菜很香。","抢劫前后一共只持续了三分钟。","他两脚发肿，肩酸背疼。","环化作用本身是慢的一步。","他的忠诚从不动摇。","她的左面有一个钢筋水泥的碉堡。","这种生产方法最宜于微咸水。","他的顾客都属于同一类型的人物。","孩子们蹦蹦跳跳地进了教室。","展厅里张挂着许多国画。","瞧，这些葡萄怪水灵的。","我们从有一对初生的小兔开始。","粥即时煮熟肉类材料，再加上香脆的油炸鬼油条，大快朵颐。","比尔放下手里正在剥的鸡蛋。","没有办法教他说出动机来。","护士对病人照应得很好。","月亮老是从云里钻进钻出。","幽灵似的骑马人在夜间催马而过。","他做了鞋店的学徒。","一个大学生应该学会思考。","这对脊椎炎无明显影响。","这领带与你的西装不（相）配。","建筑师将设计图表交付审批。","我的孙女是个可心人儿。","我今天上午有许多事要做。","她走回来接着玩儿，嘴巴紧抿着。","风把雪吹到墙边堆积起来。","树干和主枝重29，500公斤。","谦虚些，否则就要落后。","那里还有无数的盲虾。","护士宿舍可没有这种享受。","不管你想来不想来，你是一定得来。","实验室传来了硫磺气味。","把馒头在火上嘘一嘘。","书上没说他是在哪里出生的。","电灯把篮球场照得亮堂堂的。","下棋没劲，还是去打乒乓球吧。","教堂内严禁摄影。","换个环境对她是有好处的。","孩子们不停地扰乱课堂。","她把围巾围得紧一些。","这一带属辽宁地面。","一楼有廉价商品部。","李先生，你喜欢这些水果吗？","今年流行宽肩的款式。","英国在都铎王朝时代处于全盛期。","这无礼的孩子伸出了她的舌头。","房租为五十美元，包括伙食。","我们的新经理非常随和。","吃晚饭时，男人们象海盗似的狼吞虎咽。","他演奏了不需伴奏的小提琴乐曲。"]
+
+var english = ["I suspect he\'s a closet fascist","He has just learned the rudiments of chinese","The postman stuck the letter under the door","All he saw was one young spotty man","I wish she had been of my own station","Her books have gone off in recent years","Put a bit more soy sauce in the dish","Jimmy\'s star of fortune had begun to shine brightly","\"we\'re in for a blow\" dwyer said","These food markets have more or less the same setup","My little sister has a red swimming cap","Business is always brisk before christmas","Asteroid has become commonplace to the readers of interstellar travel stories in science fiction magazines","This may be true for many agarics","The audiences though the commercials were fun but too cute","My sister was the partner of my walks","Jack \'s trousers are through at the knees","The pilot lost control of the plane","He felt superior in mathematics to john","You clear the table and i\'ll make the coffee","Keep the potatoes on the simmer for ten minutes","He shot the lion at point-blank range","Yes , i would like some hot dogs , popcorn and orange juice","Diet cares more than the doctor","He is a scientist , but he is a poet as well","Her color came and went as she listened","We will play a trick on the old abbot","We design kitchens for today \'s cooks","He is n\'t  just fat , he \'s flabby","Another supermarket opened last week","The viscous drags is equal to the resultant force","There are three exposures left on this film","I address you, daddy, from a bed of pain","She bundled her son off to school","Nick went all out to win the race","Adventure stories fired his imagination","I thought to find you in the library","I can not think of his name at the moment","Move over and let your grandmother sit down","He scares people away by being so brash","Rushton felt rather sick over this affair","Cheer up, i\'m only trying to make you jealous","We will play a trick on the old abbot","It respected wealth and it despised science","The two countries signed a cultural agreement","Hurricanes never find people prepared","The furniture is too cumbersome to move","His intent blue eyes still stirred her","A farmer in france farms intensively","I never knew my lady swooned before","He reminded himself to show restraint","He would get back to the journal in a minute","The chairman adjourned the meeting for a week","Sale goods in this shop are not exchangeable","I have to go to london on business tomorrow","Fishes, crabs, octopus, are part of nekton","She practised as a solicitor for many years","Try these cakes; they are homemade","The artist dabbed paint on the canvas","Just a moment , please","I gained ten pounds during summer vacation","His mouth was open and his eyes bugging","They are the official school outfitters","I was just having lunch when bill rang","Sorry, these are the teeth i wear for the latin.","It irritated her beyond measure to see the regularity with which he went through the unvarying process of his toilet","The value of commodities often fluctuates","The trade contract stipulates for the settlement of balances in rmb","Bed and breakfast costs 15 a night","I have got the curse today","Thus the twilight months had passed","The earth completes one revolution each day","Mother works economic advantages accrue","Wherever he camped he made a fire","He is lecturing on russian literature","I warrant you, he thought i had a pumpkin on my shoulders","He is alive -- his heart is still beating","It \'s getting colder and colder from now on","The blacksmith was there reading the notice","She used up the chicken bones to make soup","Friday is a holiday in muslim countries","Cupping is the method of applying a cup in which a partial vacuum is created over an acupoint for therapeutic purpose","Playing basketball is a popular movement","That will add strength to your argument","The wiring is faulty and needs to be replaced","Acids used in pickling can include sulfuric","Price 5 yuan, packing and postage extra","He had been a heavyweight prize-fighter","Open the window and let in some fresh air","She fell and put her knee out of joint","All other forms of food had disappeared","We\'ll go to one of the fashionable restaurants in tynecastle","The ship was sailing at 35 knots","This poem has the distinctive flavour of a ballad","My parents taught me never to tell lies","It was a magnificent place altogether","The typhoon prostrated hundreds of trees","The driver gave him a lift to the station","Good secretaries are always in demand","Remember to keep the skin on the cucumber and to season it with a little salt","The railway was opened to traffic last year","He put his curly head out of the window","She \'s knitting her husband a pair of socks","Do give your shoes a polish before you go out","He went out to the village to pay tradesmen\'s books","The masses won\'t go for bureaucracy","She made eyes at the handsome actor","Lettuce grows in \"valley of green gold\"","Cyclization occurs readily with dilute alkali","Too much oxygen can also block regeneration","This tumor has gelatinous material within it","He assumed a set smile of amicability","The banker was laughing at his simplicity","On april 5 the doldrums eased","The construction is not grammatical","John would ask, biting into a juicy hamburger","His barbershop was an immense success","\"i prefer weak tea,\" cried daisy","A weasel giving new year \'s greetings to a hen has ulterior motives","A small friend stretched out on its broad gray back, asleep","When he had said thus he came upstairs","He is a dispatcher at the trolleybus company","He did not answer for fear of hurting her","The local shop has some radios going cheap","Perhaps some aspirin or painkillers might help","Somebody wildly suggested dynamiting it","We walked up the path to the front door","We flew coach from denver to new york","She has the ear of the company\'s chairman","Some parts of wales are dry on sundays","The canteen is more than usually busy today","I had fine sport with my new skates","Modern inventions facilitate housework","Tess sat up in bed, lost in a vague interspace between a dream and this information","Warm winds blow and gentle rains fall","Employees are privileged to buy at a discount","His father made a fortune out of bananas","Adventure stories fired his imagination","Would you rather have a rice cake or a big mac","She goes like the wind on her new bicycle","She enjoys watching dancing , whether ballet , or national minority dancing or any other sort of dancing","I enjoy having beer with seafood","His house is over there a piece","I gathered later that he was a photographer","You are allowed 1 liter of spirits duty-free","I could snap your neck like a carrot","Plums and apples thoroughly ripe do fall","Come as soon as you can straighten things out","The steak was so tough that he couldn\'t eat it","He is one of the science examiners","There will be heavy snow in the coming few days","I have a little money and a few interests","Our holiday got off to a flying start because the weather was good and the trains were on time","He consulted his physician about his health","He \'s trying to keep out of this quarrel","I wonder if there is any short cut","I am not getting on very fast with this job","Her brother had found his match","There is only one place left in the car park","She has determined to see the job through","He\'s going to put me through law school","The ticket reads to beijing via shanghai","Such storms spin counterclockwise in the northern hemisphere","The penalty clause was hidden in the small print","No matter what list of courses would be offered, it would not be approved by all","Soft and silent, she was standing in the dressing-room","They swindled the nation of a million","A spicy, sharp-tasting radish was exactly what her stomach craved","Asia is one of the places where mankind originated","Ballet dancers practise their skills every day","I know the kind of people he admires most","He is feeling carsick","We go boating on the lake every weekend","The process of money creation will stop cold","Somebody wildly suggested dynamiting it","The young parents spoiled their only son","The game will be staged in the gymnasium","I prefer classical music to pop music","I love her all the more because she is poor","He sat sipping grog alone downstairs","It is customary for the women to sit apart","This might have been a happy meeting","Aspirin is a good stand-by for headaches","Silence is the perfectest herald of joy","The cheese is a little too sharp for me","She had already mixed the stuffing for the dumplings","The pain in her foot was n\'t such as to stop her walking","Right from the start i was on grandpa\'s side","The teacher assigned ten problems for today","There isn\'t much sustenance in a cucumber","Her manner was friendly and she was smiling","She is a prudent housewife","She admired the firm set of his shoulders","My home is only a bus stop from the college","Golf is something that gets in the blood","You know , because i can heat up some pasta","England flourished under the tudors","I could drive a car before i left school","His political life spans half a century","\"keep a corner for the pie, peter","Ted holds a party for his friends","Your piano is flat ; it needs tuning","Grandma managed to stagger upstairs","Orange-blossom is associated with weddings","Each scrambled for the football at the football ground","These were the very higest sorts of life","By evening i was in low spirits again","We are two bitter gourds on the same vine -- we both suffered the same hard lot in the old society","He will return to london the week after next","People would have flashes of happy expression","Since this method does n\'t work , let \'s try another","I love her all the more because she is poor","We had a poor crop of raspberries this year","They kept up a good head of steam","He did n\'t come today , perhaps he \'s ill","You seem to have suffered a lot in jail","Ease down , there is a sharp bend ahead","She rather fancies herself as a singer","I could hear music playing on the radio","The soft and bloody insides are exposed","She shared an office with patricia","They assess his house at 15,000 yuan","I\'m to be in the thanksgiving theatricals","There was no help for it but to yield again","Look after them for me and keep them safe","Lettuce grows in \"valley of green gold\"","He wore old jeans and a pair of sneakers","I like the scent of the jasmine flower","I would like to talk to the manager himself","I like apples better than pears","He chucked a drunken man out of the pub","He is one hundred eighty-five centimeters tall","The weather became finer and more settled","He began playing on the lute at noon","He stayed on at university to do research","We will call at a more seemly time","Predictions for june 5 were gloomy","He felt superior in mathematics to john","At that time i wore my hair in two braids","Scoops are used to take up flour, sugar, and ice cream","His heroism claims our admiration","His tooth gave another red-hot jounce","It was the high season for summer flowers","Their behavior at the assembly had not been calculated to please in general","Only a few journalists were allowed inside","I will rustle up some eggs and bacon for you","The peasants brought out their shensi guitars","The pigs were grubbing about among the trees","All vegetables are healthful foods","They were all hungry and the food smelt good","The raid was all over in three minutes","His feet were sore and his back and shoulders ached","The cycloaddition itself is the slow step","Once he took the vow his loyalty never wavered","To her left was a concrete blockhouse","This kind of operation works best in brackish water","His clients were of the same feather","The children bounced into the classroom","The exhibition hall is decorated with many traditional chinese paintings","Look , how fresh and juicy those grapes are","We start with one pair of newly born rabbits","Roasted meat available in countless restaurants, both are quintessentially part of the hong kong dining experience.","Bill laid down the egg he was peeling","Nothing could induce him to name a motive","The nurses take good care of the patients","The moon\'s been going in and out of the clouds","Phantom horsemen rode by in the night","He was bound ( as an ) apprentice to a shoemaker","A university student should learn to think","It has no discernible effect on spondylitis","This tie does not match with your suit","The architect submitted the plans for approval","My grand-daughter is a little doll","I \'ve a lot of things to do this morning","She went back to her game, jaw clenched","The wind packed the snow against the wall","The trunk and limbs weighed 29, 500kg","Be modest , otherwise you will lag behind","Millions of blind shrimp can be found there too","There was no such luxury in the nurses\' home","Coming whether you want to or not","A sulphurous smell came from the laboratory","Put the steamed bread over the fire for a while","The book does not say where he was born","Electric lights lit up the basket-ball ground","Playing ( at ) chess is no fun ; let \'s go to play table tennis","Photography is strictly forbidden in the cathedral","The change of scene will do her some good","The children continually disturbed the class","She wrapped her shawl closer about her","This region is within the province of liaoning","There is a budget department on the first floor","How do you like these fruits , mr li ?","The broad-shouldered look is in this year","England flourished under the tudors","The saucy child protruded her tongue","The room rent is $ 50 with board","Our new manager is very easy to get on with","At supper the men eat like vikings","He played works for unaccompanied violin"]
+
+var hint = ["个,是,我,他,的,西,个,活动,个","他,汉语,门","邮递员,门","一,个,他,的,不,人,个,年轻人,个,只","一,好,我,她,和,的,样,如果","她,的,写,近,质量","点,酱,酱油,油","高,米,红","我,我们,说,风,大风","几,个,的,不,差,个,个,菜市场","一,我,有,红,游泳","是,很,很,总是,节,圣诞节","是,的,对,说,科幻,无,过","是,这,对,说,样,伞","是,有,这,但是,很,很,电视剧,有趣,为,过,部","一,是,我,的,妹妹","的,膝盖","的,对,飞,飞机,飞行员","他,的,得,比,觉得,自己,数学","我,你,咖啡,煮","十,马,分,分钟,炖,十","他,内向,离,近","一,是,我,和,的,狗,米,热,些,热狗,花","医生,看,无,看医生","是,他,家,人,又,科学家,家,科学,家","一,她,脸,白,红,听","个,我,我们,跟,长,开,个,个","一,我,的,我们,厨师,为","是,他,有,不,胖,点,肉,只","一,家,开,家,家,超级市场,张","等于","三,个,这,个,个,张","我,你,爸爸,给,写","她,儿子,学校,忙","的,得,最,跑,努力","他,的,说,像,小说","我,你,会,图书馆,图书馆","一,名字,我,他,的,不","你,外婆,坐","他,人,都,跑","不,这,很,很,开,拉,开心,件","我,你,不,高,吃,醋,吃醋,过,只","个,我,我们,跟,长,开,个,个","看,它,科学","两,文化","是,的,不,人,总是,风","家,不,很,很,方,方便,家,家","她,他,的,眼睛,蓝,热","的,法国,方,农民","我,不,人,会,头,头晕","他,有,有耐心,自己","日,他,马,日记,写,日记","一,会,周","不,换,本,退换","明天,我,天,明天","是,的,都,分,鱼,鱼,蟹,部","她,律师","是,的,家,这,都,家,家,些,蛋糕","个,家,那,颜色,家,画,油画,个,家,油,个","一,会,请稍等","十,我,的,加,暑假,十","他,都,鼓,珠,张","是,他,的,他们,校服","我,吃午饭,比,吃","是,的,这,牙,跳,拉,拉丁舞,为,套,配","一,每天,是,她,他,有,也,每天,手,天,总是,时间,看,洗手间,手,无","是,的,经常,商品","人,人民币","一,日,次,为,包","月,今天,我,天,今天,来月经","几,个,月,的,这,样,个,过,个","一,每天,每天,天,转,地球,次","加,工作,经济,母亲","一,他,不,哪,住,住在","他,俄罗斯","一,是,我,他,的,你,南,肩膀,为,南瓜","他,还,跳,还","的,天,天气,冷,越来越","个,那,看,个,广告,个","她,鸡,头,骨头","五,日,是,星期五,家,家,家","是,的,方,位,拔罐","是,的,家,家,打篮球,家","的,你,那,会,加","更,更,换,配","的,有,酸","五,和,元,包","是,他,手,职业,手","开,些,新","她,得,节,脱臼","的,都,它,食物","一,我,家,我们,泰国,家,家","三,五,十,的,那,船,度,节,十","有,这,民歌,风","千,万,我,不,说,父母,千,万,万","个,是,的,那,很,很,方,个,总之,个","百,风,台风,百","他,脚,火车,司机","是,好,的,人,都,很,很,总是,秘书","一,和,鸡,长,黄,黄瓜,少,鸡蛋饼,鸡蛋,盐,火腿","是,的,这,去年","他,的,头,卷发","一,她,袜子,给","皮鞋,门","他,的,人,那,买,卖,买卖人,卖,买","是,的,不,对,买,买","她,的,那,漂亮,演员,位,送","长,绿,生菜","容易","的,也,再,过","样","一,他,的,脸,亲切","他,的,家,银行家,银行,家,家","四,五,月,日,和,带,风,无","不,这,语法","一,的,多汁,汉堡包,问,包","十,他,的,分,十,理发店","一,叫,我,西,杯","好,鼠,鸡,黄,给,拜年","一,个,的,朋友,灰,得,它,个,个,小朋友","他,这,说,跑,楼上","是,他,的,电车,公司,度","是,她,他,的,怕","的,有,商店,本地,些,本","一,有,会,些,药,止痛药,痛","有,人,开,它,炸,张","我,我们,门,正门,正门","二,我,我们,飞,坐","她,的,很,很,长,公司,听","一,日,星期日,的,些,酒","今天,天,得,比,忙,今天,食堂","我,穿着,得,快,新,痛","家,家,发明,家","一,个,这,那,一半,直发,半,坐,听,个,个","和,风,雨,小雨,送","的,有,买,买,打折","是,他,的,香蕉,香,父亲","他,的,说,像,小说","一,个,是,你,还,会,还,年糕,个,无,个,块,块","她,飞,自行车,骑,快,新","什么,好,她,也,都,喜欢,喜欢,看,民族舞","一,我,喜欢,喜欢,吃,海鲜,酒,啤酒","一,他,的,有,这,那,离","是,我,他,白,摄影师,才,摄影","你,带,酒","一,我,的,你,样,脖子,胡萝卜","和,的,会,李子,苹果","你,马,以后,以后,马上就来","他,牛,那,得,吃,牛排","一,是,他,人,理科","雪,大雪,近","好,我,有,也,爱,点,爱好,些","一,好,我,也,都,我们,很,很,天,点,火车,开,天气,度,大吉大利","他,的,医生,健康,健康","他,不,这,中间","好,我,的,有,没有,外语,外语","我,不,这,快,工作","一,个,她,的,弟弟,对,鼓,手,个,手,个","一,个,个,位,停车场,个,只","她,这,工作,干","我,他,的,会,法律","北,北京,写,票","是,这,北,方,半,转,风,北半球","号,的,不,分,部,小号","一,个,什么,的,不,人,会,样,得,课程表,个,个","一,她,不,手,脚,更,更,更衣室,手","一,百,万,他,家,他们,手,家,家,手,百,万,万,百万,元","她,的,这,口,跟,现在,很,很,白,分,口,白萝卜,配","一,是,的,人,亚洲","每天,每天,天,演员,芭蕾舞","一,哪一,我,他,人,哪,喜欢,喜欢,最","他,得,觉得,晕车","个,我,都,我们,船,周,周末,个,个","会,创造,过","有,人,开,它,炸,张","他,的,那,独生子,他们,对,父母","体育馆","我,不,喜欢,喜欢,古典音乐,流行音乐,音乐","我,她,爱,更,更,为","他,坐,慢,楼下,酒","分,坐,开,习俗","是,这,那,圆,团圆","是,的,头,头痛,药,痛","是,快乐,好,的,方,最,快","我,这,点,得,干,觉得,味道","好,她,和,已经,饺子","她,不,还,脚,还,疼,脚疼","一,我,爷爷,开","十,个,今天,天,老师,今天,个,问,个,十","有,没有,很,很,黄,黄瓜","好,她,风,度,友好","一,个,是,她,的,家,家庭主妇,家,个,家,节,个","她,他,的,很,很,肩膀,喜欢,喜欢","一,我,家,有,家,家,离,只有,只","一,是,的,人,高,高尔夫球","什么,我,的,点,为,意大利面","都,英国","我,中学,会,开","个,他,的,长,半,政治,个,个","点,得,吃,甜","一,他,的,会,朋友,次,为,聚会","一,的,你,钢琴","好,不,奶奶,容易","一,和,一起,橙,花","我,你,足球场","是,的,高,最,它,生物","我,的,又,晚上","一,是,我,的,我们,苦,苦瓜","个,他,下个星期,个,个","人,会,偶尔","一,个,我,我们,个,试试,个,试试","我,她,爱,更,更,为","我,的,我们,今年","他,的,他们,所,所,蒸","今天,是,他,天,今天,生病","你,很,很,苦","一,个,有,一点儿,点,慢,转,个,前面,个","是,她,的,不,手,歌手,为,手","我,听,音乐","的,肉","一,个,她,和,个,办公室,个","他,的,他们,给,为,元","我,的,加,节,感恩节","好,只好,无,只","千,万,好,我,差,出差,千,万,万","长,绿,生菜","一,他,和,牛,穿着,牛仔裤,运动鞋","我,的,喜欢,喜欢,茉莉花,香,花","一,我,和,人,经理,本人,本","我,和,爱,更,比,吃,更,苹果,梨","一,个,他,酒店,个,酒,个","他,高,公分,分","天,天气,转","他,的,中午,开,弹","他,大学,工作","我,的,我们,会,更,更,适合","五,六,月,号,是,的,天,阴天","他,的,得,比,觉得,自己,数学","我,的,两,那,头发,头","和,粉,勺子,糖","我,他,的,我们,得,应该,为","一,他,的,牙,又,辣,疼","是,的,开,季节,节,花","一,好,他,的,不,人,那,他们,舞场,只","有,记者,少,只有,只","我,和,你,鸡,猪,给,些,肉,猪肉,鸡蛋","他,西,农民,吉他","猪","是,的,有,都,食物,蔬菜,健康,健康","他,都,他们,很,很,香","一,三,分,分钟,一共,只","他,两,脚,酸,疼,背疼","一,是,的,慢,本","他,的,不,忠诚","一,个,她,的,有,个,左面,个","这,方,最,咸","一,属,他,的,人,都,顾客","教,跳,教室,孩子","画,国画,张","的,这,些,葡萄","一,我,的,兔,有,我们,对,开,生的","的,油炸鬼,加,再,快,肉,油条,粥,煮,炸,油,香","的,鸡,手,比,手,鸡蛋","他,有,没有,说,教","好,人,对,很,很,得,护士","月,是,云,月亮","的,马,人,骑,骑马,过","他,的,鞋店","一,个,大学,大学生,会,应该,个,个","这,对,无","的,你,不,这,西,领带,带,配","建筑师","个,是,我,的,人,个,孙女,个","今天,我,有,天,上午,今天","她,嘴巴","风,雪","和,斤,公斤,干","谦虚,些","的,有,还,那,还,虾,无","有,没有,这,护士,宿舍","一,是,你,不,得,一定,一定","实验室","一,头,馒头","是,出生,他,的,哪,说,哪里,生的","的,得,篮球场","是,还,还,打乒乓球","教,摄影","个,是,好,她,的,有,对,个,环境,环境,换,个,好处","不,课堂,孩子","一,她,围巾,得,些","一,属,这,带","一,有,部,商品","你,这,吗,喜欢,喜欢,先,些,水果,先生","的,今年,款式","都,英国","她,的,这,头,舌头,无,孩子","五,十,为,十,元,包,房租","我,和,的,我们,经理,新","的,虎,人,吃晚饭,吃","他,的,不,小提琴"]
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+}
+
+        function showengmeaning(){
+            document.getElementById("answer").style.visibility = "visible";
+            document.getElementById("nextbtn").style.visibility = "visible";
+            document.getElementById("showansbtn").style.visibility = "hidden";
+        }
+        
+        function nextchar(){
+            document.getElementById("answer").style.visibility = "hidden";
+            var k = getRandomInt(sen.length);
+            document.getElementById("question").innerHTML = sen[k];
+            document.getElementById("answer").innerHTML = english[k]+".";
+            document.getElementById("hint").innerHTML = hint[k];
+            document.getElementById("nextbtn").style.visibility = "hidden";
+            document.getElementById("showansbtn").style.visibility = "visible";
+        }
+        
+    
+    </script>
+    
+</body>
+
+</html>

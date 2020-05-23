@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Zhong Wen 3.0 </title>
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--faviconvicon Management-->
+        <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon/faviconvicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="favicon/faviconvicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon/faviconvicon-16x16.png">
+        <link rel="manifest" href="favicon/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/onsenui.min.css">
+        <link rel="stylesheet" href="css/onsen-css-components.min.css">
+        <link rel="stylesheet" href="css/onsenui-core.min.css">
+        <link rel="stylesheet" href="css/onsenui-fonts.css">
+        <link rel="stylesheet" href="css/theme.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="lib/jquery.min.js"></script>
+        <script src="lib/onsenui.min.js"></script>
+
+
+        <!--Additional Libraries are loaded here. P5 is for the write only.-->
+
+        <script src="http://code.responsivevoice.org/responsivevoice.js"></script>
+        <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/hanzi-writer@1.3/dist/hanzi-writer.min.js"></script>
+        <!--Main App Scripts come here-->
+
+        <script src="js/main.js" charset="utf-8"></script>
+        <script src="js/chinese.js" charset="utf-8"></script>
+        <script src="js/tutorial.js" charset="utf-8"></script>
+
+
+
+        <style>
+            a {
+                color: #fff;
+            }
+
+        </style>
+    </head>
+
+<body onload="switchpage('home');">
+    
+    <ons-page>
+        <ons-toolbar>
+            <div class="left">
+                <ons-toolbar-button>
+                    <a href="index.php" style="color:white;">
+                        <ons-icon icon="md-arrow-back"></ons-icon>
+                    </a>
+                </ons-toolbar-button>
+            </div>
+            <div class="center">
+                Sentence Guessing</div>
+
+
+
+        </ons-toolbar>
+        
+
+        <!-- Warning: Do not edit the splitter code apart from list items -->
+        <ons-splitter>
+            <!-- Everything not in the side menu -->
+            <ons-splitter-content>
+                <ons-navigator id="navigator">
+                </ons-navigator>
+            </ons-splitter-content>
+        </ons-splitter>
+    </ons-page>
+   
+  <template id="home.html">
+    <ons-page id="home">
+      <ons-card>
+        <div class="title">
+          Sentence Guessing
+        </div>
+        <div class="content">
+          <p>Guess the meaning of the following sentence.</p>
+            <h2 id="question">吃晚饭时，男人们象海盗似的狼吞虎咽。</h2>
+            
+            <p  id="answer" style="color: red">At supper the men eat like vikings</p>
+            
+            <br>
+            <p>You know the meaning of these words:</p>
+            <h3 id="hint">(的,虎,人,吃晚饭,吃)</h3>
+            
+            <br><br>
+            <ons-button id ="showansbtn" class="btn-show">
+                Show Answer
+            </ons-button>
+            
+            
+        </div>
+
+
+      </ons-card>
+      <br>
+    </ons-page>
+  </template>
+
+
+</body>
+
+</html>

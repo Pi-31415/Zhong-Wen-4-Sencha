@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>ZhongWen 3.0 - Shuo</title>
+    <meta charset="utf-8">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="http://code.responsivevoice.org/responsivevoice.js"></script>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        .sentence:hover {
+            cursor: pointer;
+        }
+        
+        .sentence{
+            font-size: 2em;
+        }
+        .btn, .btn-large, .btn-small {
+            background-color: #ee6e73;
+        }
+    </style>
+</head>
+
+<body>
+    <center><br>
+        <div class="row">
+            <form class="col s10 offset-s1">
+                <div class="row">
+                    <p>Paste a paragraph in Chinese below and click split. The paragraph will be splitted into individual sentences. Click on each sentence to practice speaking and listening.(The paragraph must be continuous - no line breaks) </p>
+                    <p>You can also use my paragraphs from my google drive <a href="https://docs.google.com/document/d/1jXpVc_8k5fi6EMZxowUEOlARJMLpm2tIX146Cnpw7Zw/edit?usp=sharing">here.</a></p>
+                    <form action="#">
+    <p>
+      <label>
+        <input name="group1" type="radio" value ="Chinese Female" checked />
+        <span>Female</span>
+      </label>
+    </p>
+    <p>
+      <label>
+        <input name="group1" type="radio" value="Chinese Male"/>
+        <span>Male</span>
+      </label>
+    </p>
+                        
+                    <p class="range-field">
+                        <label for="test5">Speed</label>
+      <input type="range" id="test5" min="0" max="200" />
+    </p>
+                    <div class="input-field col s12">
+                        <textarea id="para" rows="20" cols="50" class="materialize-textarea" autofocus></textarea>
+                        <label for="textarea1">Paragraph</label>
+                    </div>
+                    <a class="waves-effect waves-light btn-large" onclick="splits();">Split</a>
+                    <a class="waves-effect waves-light btn-large" onclick="speak();">Speak Paragraph</a>
+    
+    <br><br><br>
+    <div id="demo"></div>
+     </div>    </div>  
+    </form>
+    </div>
+        <br><br>
+    <div class="chip">
+    <img src="pi.jpg" alt="Pi">
+    App written by Pi, 2019 @ LPCUWC
+  </div><br><br>
+    </center>
+
+    <script>
+        
+        var speaker = document.querySelector('input[name=group1]:checked').value;
+        
+        var speed = 0.8;
+        var data = document.getElementById("test5").value;
+        speed = data/100;
+        //alert(speaker);
+        
+        function splits() {
+            document.getElementById("demo").innerHTML = "";
+            var para = document.getElementById("para").value;
+            var str = para;
+            var res = str.split("。");
+
+            var i;
+            for (i = 0; i < res.length - 1; i++) {
+                
+                
+                document.getElementById("demo").innerHTML += "<div class='row'><div class='col s8 offset-s2'><div class='card blue darken-1'><div class='card-content white-text'><p class='sentence' onclick='speaks(\"" + res[i] + "\");'>" + (i + 1) + ". " + res[i] + "。</p></div></div></div></div>";
+            }
+
+        }
+
+        function splitxx(x) {
+            document.getElementById("demo").innerHTML = "";
+
+            var str = x;
+            var res0 = str.split("。");
+            var res1 = res0.replace("?", "。");
+            var res2 = res1.replace(".", "。");
+            var res3 = res2.replace("!", "。");
+            var res4 = res3.replace(/\n/g,"");
+            var res = res4.replace(/(?:\r\n|\r|\n)/g, '');
+            var i;
+            for (i = 0; i < res.length - 1; i++) {
+                document.getElementById("demo").innerHTML += "<a onclick='speaks(\"" + res[i] + "\");'>" + (i + 1) + ". " + res[i] + "。</a><br><br>";
+            }
+
+        }
+
+
+        function speak() {
+            speaker = document.querySelector('input[name=group1]:checked').value;
+            data = document.getElementById("test5").value;
+        speed = data/100;
+            var para = document.getElementById("para").value;
+            console.log(para);
+            responsiveVoice.speak(para, speaker, {
+                rate: speed
+            });
+            splitxx(para);
+        }
+
+        function speaks(x) {
+            speaker = document.querySelector('input[name=group1]:checked').value;
+            data = document.getElementById("test5").value;
+        speed = data/100;
+            responsiveVoice.speak(x, speaker, {
+                rate: speed
+            });
+            splits();
+        }
+
+        function speaksl() {
+            speaker = document.querySelector('input[name=group1]:checked').value;
+            data = document.getElementById("test5").value;
+        speed = data/100;
+            var para = document.getElementById("para").value;
+            console.log(para);
+            responsiveVoice.speak(para, speaker, {
+                rate: speed
+            });
+            splitxx(para);
+        }
+
+    </script>
+
+    <!--JavaScript at end of body for optimized loading-->
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+
+</html>
