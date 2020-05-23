@@ -1,8 +1,11 @@
-# ZhongWen3.0
+# Previous versions
 Older, but functional ZhongWen 2.5 - (http://paingthet.com/coding/zhongwen/)
 
 This repo is currently in development mode at (http://paingthet.com/coding/zhongwen3/)
 
-The backup of basic working source code can be found in a forked Repository in Circle-Ratio.
+# Zhong-Wen-4-Sencha
 
-An online learning platform for IB Mandarin Ab Initio Syllabus.
+
+![Image of Zhong Wen 4](https://raw.githubusercontent.com/Pi-31415/Zhong-Wen-4-Sencha/master/preview/preview.png?token=ADSQ3R5IS2EMLX7TCCKQC726ZE3YC)
+
+
