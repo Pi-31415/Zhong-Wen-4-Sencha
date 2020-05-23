@@ -14,15 +14,15 @@ Currently, fully functional and hosted at (http://zw4.paingthet.com)
 Current features include
 
 ### Browsing the Chinese Character Database
-![Image of Browse](https://raw.githubusercontent.com/Pi-31415/Zhong-Wen-4-Sencha/master/preview/browse.png)
+![Image of Browse](preview/browse.png)
 
 ### Browsing the Sentence Structures
-![Image of Sentences](https://raw.githubusercontent.com/Pi-31415/Zhong-Wen-4-Sencha/master/preview/sentence.png)
+![Image of Sentences](preview/sentence.png)
 
 ### Flashcards with animated strokes
-![Image of Flashcards](https://raw.githubusercontent.com/Pi-31415/Zhong-Wen-4-Sencha/master/preview/flashcard.png)
+![Image of Flashcards](preview/flashcard.png)
 
 ### Writing Characters
-![Image of Write](https://raw.githubusercontent.com/Pi-31415/Zhong-Wen-4-Sencha/master/preview/write.png)
+![Image of Write](preview/write.png)
 
 
