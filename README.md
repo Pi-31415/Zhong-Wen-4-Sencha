@@ -9,7 +9,7 @@ Zhong Wen 4 (Sencha) is the Chinese revision platform for University level Chine
 
 Currently, fully functional and hosted at (http://zw4.paingthet.com)
 
-![Image of Zhong Wen 4](https://raw.githubusercontent.com/Pi-31415/Zhong-Wen-4-Sencha/master/preview/preview.png)
+![Image of Zhong Wen 4](preview/preview.png)
 
 Current features include
 
