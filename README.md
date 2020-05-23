@@ -1,8 +1,28 @@
-# ZhongWen3.0
-Older, but functional ZhongWen 2.5 - (http://paingthet.com/coding/zhongwen/)
+# Previous versions
+Oldest, but functional ZhongWen 2.0 - (http://paingthet.com/coding/zhongwen/)
 
-This repo is currently in development mode at (http://paingthet.com/coding/zhongwen3/)
+Fully functional ZhongWen 3.0 (Cherry Blossoms) at (http://zw.paingthet.com). This is for IB Mandarin Ab Initio Level.
 
-The backup of basic working source code can be found in a forked Repository in Circle-Ratio.
+# Zhong-Wen-4-Sencha
 
-An online learning platform for IB Mandarin Ab Initio Syllabus.
+Zhong Wen 4 (Sencha) is the Chinese revision platform for University level Chinese and beyond.
+
+Currently, fully functional and hosted at (http://zw4.paingthet.com)
+
+![Image of Zhong Wen 4](preview/preview.png)
+
+Current features include
+
+### Browsing the Chinese Character Database
+![Image of Browse](preview/browse.png)
+
+### Browsing the Sentence Structures
+![Image of Sentences](preview/sentence.png)
+
+### Flashcards with animated strokes
+![Image of Flashcards](preview/flashcard.png)
+
+### Writing Characters
+![Image of Write](preview/write.png)
+
+
