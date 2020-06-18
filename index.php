@@ -93,7 +93,7 @@
 					<ons-icon icon="ion-navicon, material:md-menu" onclick="togglemenu();"></ons-icon>
 				</ons-toolbar-button>
 			</div>
-			<div class="center">中文 3.0</div>
+			<div class="center">中文 4.0</div>
 			<div class="right">
 				<ons-toolbar-button icon="md-help-outline" onclick="showPopover(flashcard);"></ons-toolbar-button>
 			</div>
@@ -153,7 +153,7 @@
 				<center>
 					<h3>中文 (Zhong Wen)</h3>
 					<img src="logo.png" height="100" width="100">
-					<p>Version 3.0 (Cherry Blossom)</p>
+					<p>Version 4.0 (Sencha)</p>
 					<ons-button modifier="large" class="homebtn" id="flashcard" onclick="switchpage('flashcard')">Flashcards - <ons-icon size="15px" icon="images"></ons-icon>
 					</ons-button>
 					<br><br>
@@ -225,7 +225,7 @@
 	<ons-popover direction="up" id="popover" cancelable>
 		<div style="padding: 10px; text-align: center;">
 			<p>
-				Hi, welcome to 中文 3.0. To get started, tap any of the buttons below.
+				Hi, welcome to 中文 4.0. To get started, tap any of the buttons below.
 			</p>
 		</div>
 	</ons-popover>
@@ -238,7 +238,7 @@
 					Sandbox Area
 				</div>
 				<div class="content">
-					<p>Zhong Wen 3.0 is a web-based Chinese learning app created by Pi, based on the IB Mandarin Ab Initio Syllabus. It is free to use for everyone, without any charge and without any ads.</p>
+					<p>Zhong Wen 4.0 is a web-based Chinese learning app created by Pi, based on the IB Mandarin Ab Initio Syllabus. It is free to use for everyone, without any charge and without any ads.</p>
 				</div>
 
 				<div class="hanzi-container-large" id="我有很多中文作业"></div>
@@ -645,7 +645,7 @@ if ($result->num_rows > 0) {
 							<img class="list-item__thumbnail" src="https://image.flaticon.com/teams/slug/google.jpg">
 						</div>
 						<div class="center">
-							<span class="list-item__title">Google Images</span><span class="list-item__subtitle">All images used in this app, apart from the logo, are extracted from Google images. All images are the properties of their respective owners. Zhong Wen 3.0 or Pi does not own the images unless stated otherwise.</span>
+							<span class="list-item__title">Google Images</span><span class="list-item__subtitle">All images used in this app, apart from the logo, are extracted from Google images. All images are the properties of their respective owners. Zhong Wen 4.0 or Pi does not own the images unless stated otherwise.</span>
 						</div>
 					</ons-list-item>
 					<br><br>
