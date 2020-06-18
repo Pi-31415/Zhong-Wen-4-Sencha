@@ -14,7 +14,7 @@
     else{
         //echo'Connected to database successfully';
     }
-    mysqli_select_db($conn,'ZW3');
+    mysqli_select_db($conn,'ZW4');
     mysqli_set_charset($conn,"utf8");
     $sql = "SELECT COUNT('hanzi_id') FROM HANZI WHERE topic_id = '$topic'";
     $result = $conn->query($sql);

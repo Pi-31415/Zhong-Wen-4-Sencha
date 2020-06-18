@@ -15,7 +15,7 @@ if(!$conn){
 else{
     //echo'Connected to database successfully';
 }
-mysqli_select_db($conn,'ZW3');
+mysqli_select_db($conn,'ZW4');
 mysqli_set_charset($conn,"utf8");
 $deck = $_GET['deck'] ?? 1;
 
