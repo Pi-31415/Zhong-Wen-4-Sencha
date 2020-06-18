@@ -4,7 +4,7 @@ require('dbconfig.php');
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Zhong Wen 3.0 Admin</title>
+  <title>Zhong Wen 4.0 Admin</title>
 
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">

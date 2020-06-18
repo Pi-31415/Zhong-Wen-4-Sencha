@@ -19,7 +19,7 @@ if ($result->num_rows > 0) {
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Zhong Wen 3.0</title>
+  <title>Zhong Wen 4.0</title>
 
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">

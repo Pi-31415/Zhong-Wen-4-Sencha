@@ -61,7 +61,7 @@ require('dbconfig.php');
   <ons-page>
     <ons-toolbar>
 
-      <div class="center">中文 3.0 - Admin</div>
+      <div class="center">中文 4.0 - Admin</div>
 
     </ons-toolbar>
 
