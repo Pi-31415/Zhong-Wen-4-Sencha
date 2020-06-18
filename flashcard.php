@@ -56,7 +56,7 @@ if ($result->num_rows > 0) {
 
         <!--Additional Libraries are loaded here. P5 is for the write only.-->
 
-        <script src="http://code.responsivevoice.org/responsivevoice.js"></script>
+        <script src="https://code.responsivevoice.org/responsivevoice.js?key=kqPJ0rUe"></script>
         <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/hanzi-writer@1.3/dist/hanzi-writer.min.js"></script>
         <!--Main App Scripts come here-->
@@ -145,7 +145,7 @@ if ($result->num_rows > 0) {
                     <div class="chinword card-word" onclick="speakchin(localStorage.curchin);"></div>
                     <div class="pinyin card-pinyin" onclick="speakchin(localStorage.curchin);"> </div>
                     <br>
-                    <div class="card-stroke"></div>
+                    <div class="card- "></div>
                     <center>
                         <div class="card-img"></div>
                     </center>
