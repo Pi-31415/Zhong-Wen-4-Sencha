@@ -52,7 +52,7 @@ if ($result->num_rows > 0) {
     <script src="./lib/jquery.min.js"></script>
     <script src="./lib/onsenui.min.js"></script>
 
-    <script src="http://code.responsivevoice.org/responsivevoice.js"></script>
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=kqPJ0rUe"></script>
     <!--<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>-->
     <script src="https://cdn.jsdelivr.net/npm/hanzi-writer@1.3/dist/hanzi-writer.min.js"></script>
     <script type="text/javascript" src="lib/p5.min.js"></script>

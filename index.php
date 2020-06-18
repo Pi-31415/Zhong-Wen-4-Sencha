@@ -65,7 +65,7 @@
 
 
     <!--Additional Libraries are loaded here. P5 is for the write only.-->
-    <script src="http://code.responsivevoice.org/responsivevoice.js"></script>
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=kqPJ0rUe"></script>
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/hanzi-writer@1.3/dist/hanzi-writer.min.js"></script>
 
