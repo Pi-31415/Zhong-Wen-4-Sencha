@@ -6,8 +6,8 @@
 
 $output = "";
 $dbhost = 'localhost';
-$dbuser = '***';
-$dbpass = '***';
+$dbuser = 'Paing_Thet_Ko';
+$dbpass = '2ndDennisRitchie';
 $conn = mysqli_connect($dbhost, $dbuser, $dbpass);
 if(!$conn){
     //die('Could not connect to database - '.mysqli_error());
@@ -15,7 +15,7 @@ if(!$conn){
 else{
     //echo'Connected to database successfully';
 }
-mysqli_select_db($conn,'ZW4');
+mysqli_select_db($conn,'ZW3');
 mysqli_set_charset($conn,"utf8");
 $deck = $_GET['deck'] ?? 1;
 

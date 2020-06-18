@@ -119,7 +119,7 @@ if ($result->num_rows > 0) {
       $row3 = mysqli_fetch_array($result3);
       $img = "<img src=../uploads/".$row3['img_name']." width='100px'>";
       //editing link for each
-      $edit = "<a href=\"editchar.php?charid=".$row['hanzi_id']."\" style=\"color:#3eb489;\"><ons-icon icon=\"ion-edit\"></ons-icon></a>";
+      $edit = "<a href=\"editchar.php?charid=".$row['hanzi_id']."\" style=\"color:#ef5350;\"><ons-icon icon=\"ion-edit\"></ons-icon></a>";
 
 
       $string = "<tr>"."<td>".$topic."</td>"."<td>".$row["word"]."</td>"."<td>".$row["pinyin"]."</td>"."<td>".$row["meaning"]."</td>"."<td>".$img."</td>"."<td>".substr($row["fact"],0,17)."</td>"."<td>".$row["year"]."</td>"."<td>".$edit."</td>"."</tr>";

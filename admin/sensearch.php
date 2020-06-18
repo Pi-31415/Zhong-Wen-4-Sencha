@@ -11,7 +11,7 @@ if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
       $char = $row['struct'];
       $output .= "<ons-list  modifier=\"inset\">
-        <ons-list-header><h3 style='color:#3eb489'>".$row['struct']."</h3></ons-list-header>
+        <ons-list-header><h3 style='color:#ef5350'>".$row['struct']."</h3></ons-list-header>
         <ons-list-item>".$row['struct_description']."</ons-list-item>
       <ons-list-item expandable>
        <span style='color:#f57c00;'>Show Examples</span>
@@ -25,7 +25,7 @@ if ($result->num_rows > 0) {
           $counter = 1;
           while($row1 = $result2->fetch_assoc()) {
 
-            $sen = str_replace($char,"<span style='color:#3eb489'>".$char."</span>", $row1['sen']);
+            $sen = str_replace($char,"<span style='color:#ef5350'>".$char."</span>", $row1['sen']);
 
             $output .= "<ons-list-item style='font-size:1.1em;'><i>".$counter.". ".$sen."</i></ons-list-item>";
             //echo $row1['sen']."<br>";

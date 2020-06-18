@@ -135,7 +135,7 @@ if ($result->num_rows > 0) {
       $row3 = mysqli_fetch_array($result3);
       $img = "<img src=uploads/".$row3['img_name']." width='60px' class='browseimg'>";
       //editing link for each
-      $edit = "<a href=\"\" style=\"color:#3eb489;\"><ons-icon icon=\"ion-edit\"></ons-icon></a>";
+      $edit = "<a href=\"\" style=\"color:#ef5350;\"><ons-icon icon=\"ion-edit\"></ons-icon></a>";
 
       $hanzistroke = "<div class=\"hanzi-container-large\" onclick=\"speakchin('".$row["word"]."')\" id=\"".$row["word"]."\"></div>";
 

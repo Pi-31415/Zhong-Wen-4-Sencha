@@ -145,7 +145,7 @@ if ($result->num_rows > 0) {
                     <div class="chinword card-word" onclick="speakchin(localStorage.curchin);"></div>
                     <div class="pinyin card-pinyin" onclick="speakchin(localStorage.curchin);"> </div>
                     <br>
-                    <div class="card- "></div>
+                    <div class="card-stroke"></div>
                     <center>
                         <div class="card-img"></div>
                     </center>
