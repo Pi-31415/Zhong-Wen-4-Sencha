@@ -344,7 +344,7 @@ if ($result->num_rows > 0) {
 
             $sen = str_replace($char,"<span style='color:#ef5350'>".$char."</span>", $row1['sen']);
 
-            $output .= "<ons-list-item style='font-size:1.1em;'><i onclick=\"speakchin('".explode("(",$sen)[0]."')\">".$counter.". ".$sen."</i></ons-list-item>";
+            $output .= "<ons-list-item style='font-size:1.1em;'><i onclick=\"speakchin('".explode("(",$row1['sen'])[0]."')\">".$counter.". ".$sen."</i></ons-list-item>";
             //echo $row1['sen']."<br>";
             $counter = $counter + 1;
           }
