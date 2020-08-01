@@ -312,7 +312,7 @@
 				<div class="title">
 					Sentence Structures</div>
 				<div class="content">
-					<p>Here are Pi's own notes for the Mandarin sentence structures. They are for the entire syllabus, so try searching only the ones you need. Pi does not guarantee that everything is correct, but good enough is good enough. Use at your own risk.</p><br>
+					<p>Here are Pi's own notes for the Mandarin sentence structures. They are for the entire syllabus, so try searching only the ones you need. Pi does not guarantee that everything is correct, but good enough is good enough. Use at your own risk.</p><p>You can click on the example sentences to hear them.</p><br>
 					<p style="text-align: center;">
 						<ons-search-input placeholder="Search" id="sensearchbar" onchange="sentencesearch(this.value);"></ons-search-input><br><br>
 						<ons-button onclick="sentencesearch(document.getElementById('sensearchbar').value);">Search</ons-button>
